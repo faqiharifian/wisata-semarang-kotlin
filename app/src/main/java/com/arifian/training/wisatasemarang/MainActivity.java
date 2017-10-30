@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, HomeFragment.newInstance())
-                .addToBackStack(null)
                 .commit();
     }
 
@@ -104,6 +103,7 @@ public class MainActivity extends AppCompatActivity
         if(fragment != null){
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container, fragment)
+                    .addToBackStack(null)
                     .commit();
         }
         return true;
