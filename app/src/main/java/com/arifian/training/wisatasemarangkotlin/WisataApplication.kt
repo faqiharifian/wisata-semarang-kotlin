@@ -1,10 +1,10 @@
-package com.arifian.training.wisatasemarang
+package com.arifian.training.wisatasemarangkotlin
 
 import android.app.Activity
 import android.app.Application
 
-import com.arifian.training.wisatasemarang.models.remote.WisataClient
-import com.arifian.training.wisatasemarang.models.remote.WisataService
+import com.arifian.training.wisatasemarangkotlin.models.remote.WisataClient
+import com.arifian.training.wisatasemarangkotlin.models.remote.WisataService
 
 /**
  * Created by faqih on 30/10/17.

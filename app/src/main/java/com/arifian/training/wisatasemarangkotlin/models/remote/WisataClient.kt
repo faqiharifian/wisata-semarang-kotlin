@@ -1,4 +1,4 @@
-package com.arifian.training.wisatasemarang.models.remote
+package com.arifian.training.wisatasemarangkotlin.models.remote
 
 import android.content.Context
 

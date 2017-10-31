@@ -1,4 +1,4 @@
-package com.arifian.training.wisatasemarang.models.remote.responses
+package com.arifian.training.wisatasemarangkotlin.models.remote.responses
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

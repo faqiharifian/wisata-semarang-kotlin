@@ -1,4 +1,4 @@
-package com.arifian.training.wisatasemarang
+package com.arifian.training.wisatasemarangkotlin
 
 
 import android.content.Intent
@@ -8,12 +8,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
-import com.arifian.training.wisatasemarang.DetailWisataActivity.Companion.KEY_WISATA
-import com.arifian.training.wisatasemarang.adapters.WisataAdapter
-import com.arifian.training.wisatasemarang.databinding.FragmentHomeBinding
-import com.arifian.training.wisatasemarang.models.Wisata
-import com.arifian.training.wisatasemarang.models.remote.SimpleRetrofitCallback
-import com.arifian.training.wisatasemarang.models.remote.responses.WisataResponse
+import com.arifian.training.wisatasemarangkotlin.Utils.Constants.Companion.KEY_WISATA
+import com.arifian.training.wisatasemarangkotlin.adapters.WisataAdapter
+import com.arifian.training.wisatasemarangkotlin.databinding.FragmentHomeBinding
+import com.arifian.training.wisatasemarangkotlin.models.Wisata
+import com.arifian.training.wisatasemarangkotlin.models.remote.SimpleRetrofitCallback
+import com.arifian.training.wisatasemarangkotlin.models.remote.responses.WisataResponse
 import org.parceler.Parcels
 import java.util.*
 
@@ -31,6 +31,39 @@ class HomeFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         mBinding = FragmentHomeBinding.inflate(inflater!!, container, false)
+
+//        val listener = WisataAdapter.OnWisataClickListener{ wisata: Wisata ->
+//
+//                val intent = Intent(activity, DetailWisataActivity::class.java)
+//                intent.putExtra(KEY_WISATA, Parcels.wrap(wisata))
+//                startActivity(intent)
+//
+//            false
+//        }
+
+//        val mOnNavigationItemSelectedListener
+//                = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+//            when (item.itemId) {
+//                R.id.navigation_home -> {
+//                    mTextMessage.setText(R.string.title_home)
+//                    return@OnNavigationItemSelectedListener true
+//                }
+//                R.id.navigation_dashboard -> {
+//                    mTextMessage.setText(R.string.title_dashboard)
+//                    return@OnNavigationItemSelectedListener true
+//                }
+//            }
+//            false
+//        }
+
+//        adapter = WisataAdapter(wisataArrayList, {
+//            wisata: Wisata ->
+//            val intent = Intent(activity, DetailWisataActivity::class.java)
+//            intent.putExtra(KEY_WISATA, Parcels.wrap(wisata))
+//            startActivity(intent)
+//            }
+//                as WisataAdapter.OnWisataClickListener
+//        )
 
         adapter = WisataAdapter(wisataArrayList, object: WisataAdapter.OnWisataClickListener{
             override fun onItemClick(wisata: Wisata) {
@@ -57,7 +90,7 @@ class HomeFragment : Fragment() {
                 .enqueue(object : SimpleRetrofitCallback<WisataResponse>(activity) {
                     override fun onSuccess(response: WisataResponse) {
                         wisataArrayList.addAll(response.wisata!!)
-                        adapter.notifyDataSetChanged()
+                        adapter.swapData(wisataArrayList)
                     }
                 })
     }

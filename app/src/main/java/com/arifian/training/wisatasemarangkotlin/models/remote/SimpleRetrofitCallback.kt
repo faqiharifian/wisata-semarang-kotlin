@@ -1,8 +1,8 @@
-package com.arifian.training.wisatasemarang.models.remote
+package com.arifian.training.wisatasemarangkotlin.models.remote
 
 import android.app.Activity
 import android.widget.Toast
-import com.arifian.training.wisatasemarang.models.remote.responses.BaseResponse
+import com.arifian.training.wisatasemarangkotlin.models.remote.responses.BaseResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

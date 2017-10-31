@@ -6,13 +6,13 @@
     <data>
         <variable
             name="wisata"
-            type="com.arifian.training.wisatasemarang.models.Wisata"/>
+            type="com.arifian.training.wisatasemarangkotlin.models.Wisata"/>
     </data>
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.arifian.training.wisatasemarang.DetailWisataActivity"
+        tools:context="com.arifian.training.wisatasemarangkotlin.DetailWisataActivity"
         tools:showIn="@layout/activity_detail_wisata">
 
         <LinearLayout

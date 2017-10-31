@@ -1,4 +1,4 @@
-package com.arifian.training.wisatasemarang
+package com.arifian.training.wisatasemarangkotlin
 
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton

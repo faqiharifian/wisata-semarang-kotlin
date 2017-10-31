@@ -1,6 +1,6 @@
-package com.arifian.training.wisatasemarang.models.remote.responses
+package com.arifian.training.wisatasemarangkotlin.models.remote.responses
 
-import com.arifian.training.wisatasemarang.models.Wisata
+import com.arifian.training.wisatasemarangkotlin.models.Wisata
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 

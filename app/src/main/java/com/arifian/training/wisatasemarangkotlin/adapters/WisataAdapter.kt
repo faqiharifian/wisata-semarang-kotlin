@@ -1,13 +1,13 @@
-package com.arifian.training.wisatasemarang.adapters
+package com.arifian.training.wisatasemarangkotlin.adapters
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.arifian.training.wisatasemarang.R
-import com.arifian.training.wisatasemarang.Utils.GlideApp
-import com.arifian.training.wisatasemarang.databinding.ItemWisataBinding
-import com.arifian.training.wisatasemarang.models.Wisata
-import com.arifian.training.wisatasemarang.models.remote.WisataClient
+import com.arifian.training.wisatasemarangkotlin.R
+import com.arifian.training.wisatasemarangkotlin.Utils.GlideApp
+import com.arifian.training.wisatasemarangkotlin.databinding.ItemWisataBinding
+import com.arifian.training.wisatasemarangkotlin.models.Wisata
+import com.arifian.training.wisatasemarangkotlin.models.remote.WisataClient
 import java.util.*
 
 /**
@@ -36,7 +36,13 @@ class WisataAdapter(wisataArrayList: List<Wisata>, internal var listener: OnWisa
         return wisataArrayList.size
     }
 
-    interface OnWisataClickListener {
+    fun swapData(wisataArrayList: List<Wisata>){
+        this.wisataArrayList.clear()
+        this.wisataArrayList.addAll(wisataArrayList)
+        this.notifyDataSetChanged()
+    }
+
+    public interface OnWisataClickListener {
         fun onItemClick(wisata: Wisata)
     }
 

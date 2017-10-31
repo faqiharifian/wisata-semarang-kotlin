@@ -1,4 +1,4 @@
-package com.arifian.training.wisatasemarang
+package com.arifian.training.wisatasemarangkotlin
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.arifian.training.wisatasemarang.Utils
+package com.arifian.training.wisatasemarangkotlin.Utils
 
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.module.AppGlideModule

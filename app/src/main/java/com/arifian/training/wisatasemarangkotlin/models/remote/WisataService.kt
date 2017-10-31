@@ -1,6 +1,6 @@
-package com.arifian.training.wisatasemarang.models.remote
+package com.arifian.training.wisatasemarangkotlin.models.remote
 
-import com.arifian.training.wisatasemarang.models.remote.responses.WisataResponse
+import com.arifian.training.wisatasemarangkotlin.models.remote.responses.WisataResponse
 
 import retrofit2.Call
 import retrofit2.http.GET
