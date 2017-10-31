@@ -12,6 +12,8 @@ import org.parceler.Parcel
 @Parcel
 class Wisata {
 
+    constructor()
+
     constructor(idWisata: String?, namaWisata: String?, gambarWisata: String?, deksripsiWisata: String?, alamatWisata: String?, latitudeWisata: String?, longitudeWisata: String?) {
         this.idWisata = idWisata
         this.namaWisata = namaWisata

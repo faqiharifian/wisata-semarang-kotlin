@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val navigationView = findViewById<View>(R.id.nav_view) as NavigationView
         navigationView.setNavigationItemSelectedListener(this)
+        navigationView.setCheckedItem(R.id.nav_home)
 
         supportFragmentManager.beginTransaction()
                 .replace(R.id.container, HomeFragment.newInstance())
@@ -72,13 +73,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
+        val fm = supportFragmentManager
+        for (i in 0 until fm.backStackEntryCount) {
+            fm.popBackStack()
+        }
         val id = item.itemId
 
-        val fragment: Fragment? = null
+        var fragment: Fragment? = null
         when (id) {
             R.id.nav_home -> {
+                fragment = HomeFragment.newInstance()
             }
             R.id.nav_favorite -> {
+                fragment = FavoriteFragment.newInstance()
             }
             R.id.nav_map -> {
             }
@@ -92,7 +99,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if (fragment != null) {
             supportFragmentManager.beginTransaction()
                     .replace(R.id.container, fragment)
-                    .addToBackStack(null)
                     .commit()
         }
         return true

@@ -32,39 +32,6 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         mBinding = FragmentHomeBinding.inflate(inflater!!, container, false)
 
-//        val listener = WisataAdapter.OnWisataClickListener{ wisata: Wisata ->
-//
-//                val intent = Intent(activity, DetailWisataActivity::class.java)
-//                intent.putExtra(KEY_WISATA, Parcels.wrap(wisata))
-//                startActivity(intent)
-//
-//            false
-//        }
-
-//        val mOnNavigationItemSelectedListener
-//                = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-//            when (item.itemId) {
-//                R.id.navigation_home -> {
-//                    mTextMessage.setText(R.string.title_home)
-//                    return@OnNavigationItemSelectedListener true
-//                }
-//                R.id.navigation_dashboard -> {
-//                    mTextMessage.setText(R.string.title_dashboard)
-//                    return@OnNavigationItemSelectedListener true
-//                }
-//            }
-//            false
-//        }
-
-//        adapter = WisataAdapter(wisataArrayList, {
-//            wisata: Wisata ->
-//            val intent = Intent(activity, DetailWisataActivity::class.java)
-//            intent.putExtra(KEY_WISATA, Parcels.wrap(wisata))
-//            startActivity(intent)
-//            }
-//                as WisataAdapter.OnWisataClickListener
-//        )
-
         adapter = WisataAdapter(wisataArrayList, object: WisataAdapter.OnWisataClickListener{
             override fun onItemClick(wisata: Wisata) {
                 val intent = Intent(activity, DetailWisataActivity::class.java)
