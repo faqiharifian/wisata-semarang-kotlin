@@ -66,4 +66,27 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null,
         db.close()
         return count
     }
+
+    fun query(): ArrayList<Wisata>{
+        val db = readableDatabase
+
+        val wisatas = ArrayList<Wisata>()
+        val cursor = db.query(DATABASE_TABLE, null, null, null, null, null,null)
+        if(cursor != null){
+            while (cursor.moveToNext()){
+                val wisata = Wisata(
+                        cursor.getInt(cursor.getColumnIndex(WISATA_ID)).toString(),
+                        cursor.getString(cursor.getColumnIndex(NAMA_WISATA)),
+                        cursor.getString(cursor.getColumnIndex(GAMBAR_WISATA)),
+                        cursor.getString(cursor.getColumnIndex(ALAMAT_WISATA)),
+                        cursor.getString(cursor.getColumnIndex(DESKRIPSI_WISATA)),
+                        cursor.getString(cursor.getColumnIndex(LATITUDE_WISATA)),
+                        cursor.getString(cursor.getColumnIndex(LONGITUDE_WISATA))
+                )
+                wisatas.add(wisata)
+            }
+        }
+        cursor.close()
+        return wisatas
+    }
 }

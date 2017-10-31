@@ -77,8 +77,8 @@ class DetailWisataActivity : AppCompatActivity() {
         favorite = !favorite
 
         val editor = pref!!.edit()
-        editor.putBoolean(KEY_WISATA + wisata.namaWisata, favorite)
-        editor.commit()
+        editor.putBoolean(PREF_FAVORITE + wisata.namaWisata, favorite)
+        editor.apply()
 
         checkFavorite()
     }

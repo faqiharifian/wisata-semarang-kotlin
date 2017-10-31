@@ -11,6 +11,17 @@ import org.parceler.Parcel
 
 @Parcel
 class Wisata {
+
+    constructor(idWisata: String?, namaWisata: String?, gambarWisata: String?, deksripsiWisata: String?, alamatWisata: String?, latitudeWisata: String?, longitudeWisata: String?) {
+        this.idWisata = idWisata
+        this.namaWisata = namaWisata
+        this.gambarWisata = gambarWisata
+        this.deksripsiWisata = deksripsiWisata
+        this.alamatWisata = alamatWisata
+        this.latitudeWisata = latitudeWisata
+        this.longitudeWisata = longitudeWisata
+    }
+
     @SerializedName("id_wisata")
     @Expose
     var idWisata: String? = null
