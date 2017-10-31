@@ -1,11 +1,10 @@
 package com.arifian.training.wisatasemarang;
 
+import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 
 import com.arifian.training.wisatasemarang.Utils.GlideApp;
 import com.arifian.training.wisatasemarang.databinding.ActivityDetailWisataBinding;
@@ -19,6 +18,9 @@ public class DetailWisataActivity extends AppCompatActivity {
 
     ActivityDetailWisataBinding mBinding;
     Wisata wisata;
+
+    boolean favorite;
+    SharedPreferences pref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +39,21 @@ public class DetailWisataActivity extends AppCompatActivity {
                 .centerCrop()
                 .into(mBinding.ivDetailGambar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
+        checkFavorite();
+
+        mBinding.fab.setOnClickListener((view) -> {
+            favorite = !favorite;
+            checkFavorite();
+
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
         });
+    }
+
+    private void checkFavorite() {
+        if(favorite)
+            mBinding.fab.setImageResource(R.drawable.ic_action_favorite_true);
+        else
+            mBinding.fab.setImageResource(R.drawable.ic_action_favorite_false);
     }
 }
