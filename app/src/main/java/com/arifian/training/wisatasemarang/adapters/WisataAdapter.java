@@ -19,9 +19,11 @@ import java.util.List;
 
 public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.ViewHolder>{
     private List<Wisata> wisataArrayList = new ArrayList<>();
+    OnWisataClickListener listener;
 
-    public WisataAdapter(List<Wisata> wisataArrayList) {
+    public WisataAdapter(List<Wisata> wisataArrayList, OnWisataClickListener listener) {
         this.wisataArrayList = wisataArrayList;
+        this.listener = listener;
     }
 
     @Override
@@ -41,11 +43,19 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.ViewHolder
                 .error(R.drawable.no_image_found)
                 .centerCrop()
                 .into(holder.binding.ivItemGambar);
+
+        holder.itemView.setOnClickListener(v -> {
+            listener.onItemClick(wisata);
+        });
     }
 
     @Override
     public int getItemCount() {
         return wisataArrayList.size();
+    }
+
+    public interface OnWisataClickListener{
+        void onItemClick(Wisata wisata);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

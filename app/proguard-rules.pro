@@ -34,3 +34,8 @@
 #if you use it
 #see Parceler's github page
 #for specific proguard instructions
+
+# Parceler library
+-keep interface org.parceler.Parcel
+-keep @org.parceler.Parcel class * { *; }
+-keep class **$$Parcelable { *; }

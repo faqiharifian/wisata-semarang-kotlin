@@ -3,10 +3,13 @@ package com.arifian.training.wisatasemarang.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
 /**
  * Created by faqih on 30/10/17.
  */
 
+@Parcel
 public class Wisata {
     @SerializedName("id_wisata")
     @Expose
