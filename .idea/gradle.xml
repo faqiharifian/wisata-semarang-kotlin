@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="/mnt/64BD66E36A6D3A3E/PROJECT/-Training-/Certification/IntermediateMobile/wisata-semarang-kotlin" />
+            <option value="/mnt/64BD66E36A6D3A3E/PROJECT/-Training-/Certification/IntermediateMobile/wisata-semarang-kotlin/app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

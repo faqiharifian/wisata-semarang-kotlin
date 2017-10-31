@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/wisata-semarang.iml" filepath="$PROJECT_DIR$/wisata-semarang.iml" />
+      <module fileurl="file:///mnt/64BD66E36A6D3A3E/PROJECT/-Training-/Certification/IntermediateMobile/wisata-semarang-kotlin/app/app.iml" filepath="/mnt/64BD66E36A6D3A3E/PROJECT/-Training-/Certification/IntermediateMobile/wisata-semarang-kotlin/app/app.iml" />
+      <module fileurl="file:///mnt/64BD66E36A6D3A3E/PROJECT/-Training-/Certification/IntermediateMobile/wisata-semarang-kotlin/wisata-semarang-kotlin.iml" filepath="/mnt/64BD66E36A6D3A3E/PROJECT/-Training-/Certification/IntermediateMobile/wisata-semarang-kotlin/wisata-semarang-kotlin.iml" />
     </modules>
   </component>
 </project>
