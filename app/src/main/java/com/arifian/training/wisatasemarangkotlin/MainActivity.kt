@@ -88,6 +88,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 fragment = FavoriteFragment.newInstance()
             }
             R.id.nav_map -> {
+                fragment = MapFragment.newInstance()
             }
             R.id.nav_add -> {
             }

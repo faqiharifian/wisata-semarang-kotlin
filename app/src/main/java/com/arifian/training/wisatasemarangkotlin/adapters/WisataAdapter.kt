@@ -42,7 +42,7 @@ class WisataAdapter(wisataArrayList: List<Wisata>, internal var listener: OnWisa
         this.notifyDataSetChanged()
     }
 
-    public interface OnWisataClickListener {
+    interface OnWisataClickListener {
         fun onItemClick(wisata: Wisata)
     }
 
