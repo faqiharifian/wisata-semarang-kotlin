@@ -35,7 +35,6 @@ public class DrawRoute extends AsyncTask<String, Void, String> {
         String data = "";
         try {
             data = getJsonRoutePoint(url[0]);
-            listener.onLoadFinish(data);
             Log.d("Background Task data", data);
         } catch (Exception e) {
             Log.d("Background Task", e.toString());
@@ -46,6 +45,7 @@ public class DrawRoute extends AsyncTask<String, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
+        listener.onLoadFinish(result);
         RouteDrawerTask routeDrawerTask = new RouteDrawerTask(mMap);
         routeDrawerTask.execute(result);
     }
